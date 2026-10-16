@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { content, links, photo, tech, type Lang } from '../data/content';
+import { icons } from '../data/icons';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = content[lang];
+---
+
+<Layout title={t.title} description={t.description} lang={t.htmlLang}>
+  <header class="site">
+    <div class="container">
+      <a class="logo" href="#top">SG<span>.</span></a>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="#tech">{t.nav.tech}</a></li>
+          <li><a href="#experience">{t.nav.experience}</a></li>
+          <li><a href="#projects">{t.nav.projects}</a></li>
+          <li><a href="#certs">{t.nav.certs}</a></li>
+        </ul>
+      </nav>
+      <div class="tools">
+        <a class="btn-icon" href={t.switchHref} title={t.switchTitle} hreflang={lang === 'es' ? 'en' : 'es'}>{t.switchLabel}</a>
+        <button class="btn-icon" id="theme-toggle" type="button" aria-label="Toggle theme">◐</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="container">
+      <section class="hero">
+        <div class="hero-media">
+          <img class="avatar" src={photo} alt={t.hero.name} width="192" height="192" />
+        </div>
+        <div class="hero-body">
+          <p class="greeting">{t.hero.greeting}</p>
+          <h1>{t.hero.name}</h1>
+          <p class="role">{t.hero.role}</p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">{t.hero.cta}</a>
+            <a class="btn ghost" href="#contact">{t.hero.cta2}</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech">
+        <h2>{t.techTitle}</h2>
+        <ul class="tags tech-tags">
+          {tech.map((item) => (
+            <li>
+              <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d={icons[item.icon]} />
+              </svg>
+              {item.name}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section id="experience">
+        <h2>{t.experienceTitle}</h2>
+        <div class="stack">
+          {t.experience.map((job) => (
+            <article class="card job">
+              <h3>{job.role}</h3>
+              <div class="meta"><strong>{job.company}</strong> · {job.period}</div>
+              <p>{job.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>{t.projectsTitle}</h2>
+        <p>{t.projectsIntro}</p>
+        <div class="grid-2">
+          {t.projects.map((p) => (
+            <article class="card project">
+              <h3>{p.name}</h3>
+              <p class="sub">{p.subtitle}</p>
+              <p>{p.description}</p>
+              <ul class="tags">
+                {p.highlights.map((h) => <li>{h}</li>)}
+              </ul>
+              <a href={p.url} target="_blank" rel="noopener noreferrer">{t.repo} →</a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="certs">
+        <h2>{t.certsTitle}</h2>
+        <ul class="certs">
+          {t.certs.map((c) => (
+            <li>
+              <a href={c.url} target="_blank" rel="noopener noreferrer">
+                <span>{c.name}</span>
+                <span class="issuer">{c.issuer} ↗</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>{t.contactTitle}</h2>
+        <p>{t.contactText}</p>
+        <div class="actions">
+          <a class="btn primary" href={links.email}>Email</a>
+          <a class="btn ghost" href={links.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn ghost" href={links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site">
+    <div class="container">© {new Date().getFullYear()} Santiago Gutiérrez Ibarra · {t.footer}</div>
+  </footer>
+</Layout>
