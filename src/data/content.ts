@@ -45,8 +45,13 @@ export const content = {
       cta: "Ver proyectos",
       cta2: "Contacto",
     },
+    about: {
+      title: "Sobre mí",
+      text: "Soy Santiago Gutiérrez Ibarra, también conocido como <strong>Randalfd</strong>. Estudiante universitario y desarrollador Full Stack, interesado en la filosofía DevOps y la automatización de procesos. Mi objetivo es crecer continuamente como profesional, incorporando nuevas tecnologías, buenas prácticas y metodologías de desarrollo a mi flujo de trabajo para mejorar la eficiencia, la calidad y la productividad.",
+    },
     techTitle: "Tecnologías",
-    experienceTitle: "Experiencia",    experience: [
+    experienceTitle: "Experiencia",
+    experience: [
       {
         role: "Ayudante Universitario – Diseño y Arquitectura de Despliegues I",
         company: "Universidad Provincial de Córdoba",
@@ -110,6 +115,21 @@ export const content = {
         issuer: "Workana",
         url: "https://www.workana.com/workers/certification/69dd6863b8db00adf74dc22032ad0ac4/linux/2228037",
       },
+      {
+        name: "Curador de Datos",
+        issuer: "Fundación Carlos Slim",
+        url: "https://drive.google.com/file/d/1wNqdrn7SLS0d0GcDyO1JADpuF64AUwyO/view?usp=sharing",
+      },
+      {
+        name: "Bases de Datos",
+        issuer: "Instituto Superior Santo Domingo",
+        url: "https://drive.google.com/file/d/1Tw2Xl1nY65NqptAyje9mvt-NU6FGapB_/view?usp=sharing",
+      },
+      {
+        name: "Getting Started with DevOps On AWS",
+        issuer: "AWS",
+        url: "https://skillbuilder.aws/",
+      },
     ],
     contactTitle: "Hablemos",
     contactText:
@@ -132,11 +152,15 @@ export const content = {
       certs: "Certificates",
     },
     hero: {
-      greeting: "Hi, I'm",
+      greeting: "who i am?",
       name: "Santiago Gutiérrez Ibarra",
       role: "Full Stack Developer · Self-Taught · DevOps Enthusiast",
       cta: "See projects",
       cta2: "Contact",
+    },
+    about: {
+      title: "About me",
+      text: "I'm Santiago Gutiérrez Ibarra, also known as <strong>Randalfd</strong>. I'm a university student and Full Stack Developer with a strong interest in DevOps principles and process automation. My goal is to continuously grow as a professional by adopting emerging technologies, industry best practices, and modern development methodologies to improve efficiency, code quality, and productivity.",
     },
     techTitle: "Technologies",
     experienceTitle: "Experience",
@@ -203,6 +227,21 @@ export const content = {
         name: "Linux",
         issuer: "Workana",
         url: "https://www.workana.com/workers/certification/69dd6863b8db00adf74dc22032ad0ac4/linux/2228037",
+      },
+      {
+        name: "Data Curator",
+        issuer: "Fundación Carlos Slim",
+        url: "https://drive.google.com/file/d/1wNqdrn7SLS0d0GcDyO1JADpuF64AUwyO/view?usp=sharing",
+      },
+      {
+        name: "Databases",
+        issuer: "Instituto Superior Santo Domingo",
+        url: "https://drive.google.com/file/d/1Tw2Xl1nY65NqptAyje9mvt-NU6FGapB_/view?usp=sharing",
+      },
+      {
+        name: "Getting Started with DevOps On AWS",
+        issuer: "AWS",
+        url: "https://skillbuilder.aws/",
       },
     ],
     contactTitle: "Let's talk",

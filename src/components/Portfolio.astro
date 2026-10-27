@@ -16,6 +16,7 @@ const t = content[lang];
       <a class="logo" href="#top">SG<span>.</span></a>
       <nav aria-label="Principal">
         <ul>
+          <li><a href="#about">{t.nav.about}</a></li>
           <li><a href="#tech">{t.nav.tech}</a></li>
           <li><a href="#experience">{t.nav.experience}</a></li>
           <li><a href="#projects">{t.nav.projects}</a></li>
@@ -44,6 +45,11 @@ const t = content[lang];
             <a class="btn ghost" href="#contact">{t.hero.cta2}</a>
           </div>
         </div>
+      </section>
+
+      <section id="about" class="about">
+        <h2>{t.about.title}</h2>
+        <p set:html={t.about.text}></p>
       </section>
 
       <section id="tech">
