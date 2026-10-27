@@ -221,7 +221,7 @@ export const content = {
       {
         name: "LF101 – Introduction to Linux",
         issuer: "Linux Foundation",
-        url: "https://www.credly.com/earner/earned/badge/2bf2b798-a384-4ad4-918b-79ac363da126",
+        url: "https://www.credly.com/badges/2bf2b798-a384-4ad4-918b-79ac363da126/public_url",
       },
       {
         name: "Linux",
